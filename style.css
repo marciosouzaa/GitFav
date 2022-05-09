@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+--bgButton: #065E7C;
+--bgButton-hover: #fff;
+--bgTrHeader: #043444;
+--bgOdd: #06181C;
+}
+body{
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+#app{
+  padding: 2rem;
+  max-width: 112rem;
+  margin: 0 auto;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5rem 0;
+}
+.search{
+  display: flex;
+  align-items: center;
+}
+.search input{
+  background-color: var(--bgOdd);
+  height: 4.8rem;
+  border: none;
+  border-radius: .4rem;
+  padding: 0 .8rem;
+  width: 46rem;
+  margin-right: .8rem;
+  color: #fff;
+
+}
+.search button{
+  background-color: var(--bgButton);
+  color: #fff;
+  border-radius: .4rem;
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  height: 4.8rem;
+  width: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.search button:hover{
+  background-color: #fff;
+  color: var(--bgButton);
+}
+
+button svg{
+  margin-right: 1rem;
+}
+button:hover svg path{
+  fill: var(--bgButton);
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+table th{
+  background: var(--bgTrHeader);
+  text-align: left;
+  font-weight: bold;
+  padding: 2.5rem 4rem;
+}
+
+table tr{
+  border: .1rem solid var(--bgTrHeader);
+}
+table tr:nth-child(even){
+  background-color: transparent;
+}
+table tr:nth-child(odd){
+  background-color: var(--bgOdd);
+}
+table td{
+  padding: 2.5rem 4rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+td.user{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+td.user img{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+td.user a{
+  text-decoration: none;
+  color: #fff;
+}
+td.user a p{
+  font-weight: 700;
+}
+td.user a span{
+  font-weight: 400;
+}
+button.remove{
+  font-size: 2rem;
+  background: none;
+  color: red;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+}
+button.remove:hover{
+  filter: brightness(1.1);
+}
