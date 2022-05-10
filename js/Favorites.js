@@ -1,3 +1,5 @@
+//estruturação dos dados
+
 import { GithubUser } from './GithubUser.js'
 
 export class Favorites {
@@ -49,6 +51,7 @@ export class FavoritesView extends Favorites {
     this.tbody = this.root.querySelector('table tbody')
     this.update()
     this.onadd()
+    this.authorAdd()
   }
   onadd() {
     const addbutton = this.root.querySelector('.search button')
@@ -58,8 +61,22 @@ export class FavoritesView extends Favorites {
       this.add(value)
     }
   }
+  Empty() {
+    this.entries.length === 0
+      ? document.querySelector('.empty').classList.remove('sr-only')
+      : document.querySelector('.empty').classList.add('sr-only')
+  }
+  authorAdd() {
+    const addAuthor = this.root.querySelector('.nothing .button-85')
+    addAuthor.onclick = () => {
+      const author = 'marciosouzaa'
+      this.add(author)
+    }
+  }
 
   update() {
+    this.Empty()
+
     this.removeAllTr()
 
     this.entries.forEach(user => {

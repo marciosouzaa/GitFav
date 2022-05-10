@@ -5,10 +5,11 @@
 }
 :root{
   font-size: 62.5%;
---bgButton: #065E7C;
+--hue: 150;
+--bgButton: hsl(var(--hue), 91%, 25%);
 --bgButton-hover: #fff;
---bgTrHeader: #043444;
---bgOdd: #06181C;
+--bgTrHeader: hsl(var(--hue), 89%, 14%);
+--bgOdd: hsl(var(--hue), 65%, 7%);
 }
 body{
   background-color: #000;
@@ -91,6 +92,9 @@ table th{
   font-weight: bold;
   padding: 2.5rem 4rem;
 }
+table th:first-child{
+  width: 45rem;
+}
 
 table tr{
   border: .1rem solid var(--bgTrHeader);
@@ -138,4 +142,91 @@ button.remove{
 }
 button.remove:hover{
   filter: brightness(1.1);
+}
+.nothing {
+  font-weight: 700;
+  color: #4e5455;
+  font-size: 4rem;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10rem;
+  }
+  .nothing p {
+    border-radius: .7rem;
+    box-shadow: hsla(var(--hue), 87%, 56%, 0.2) 0px 2px, hsla(var(--hue), 87%, 56%, 0.1) 0px 4px, hsla(var(--hue), 87%, 56%, 0.05) 0px 8px;
+
+  }
+
+
+.button-85 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
