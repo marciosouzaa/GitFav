@@ -1,5 +1,6 @@
 # GitFav
- Página onde voce pode salvar seus perfis do Github. da Rocketseat. 
+ Página onde voce pode salvar seus perfis do Github. 
+ 
 https://gitfav6.netlify.app/
 
 ## Stack  e conceitos utilizados
